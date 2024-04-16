@@ -1,0 +1,5 @@
+body{
+    background-image: -webkit-linear-gradient(bottom,red,green,blue);
+    height: 1000px;
+    color: white;
+}
