@@ -1,55 +1,66 @@
 const doc = {
-    empBody: document.querySelector('empBody'),
-    addbutton: document.querySelector('addbutton')
+    empBody: document.querySelector("#empBody"),
+    addButton: document.querySelector("#addButton")
 }
-const state = {    
+
+const state = {
     url: 'http://localhost:8000/employees'
 }
 
-doc.addbutton.addEventListener("click", () => console.log(jo) 
-)
 
+doc.addButton.addEventListener('click', () => {
+    console.log('műkődik')
+    createEmployee()
+})
 
-function createEmployees(){
-    fetch(state.url),{
-        method:'post',
-        headers:{
+function createEmployee() {
+    fetch(state.url, {
+        method: 'post',
+        headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            name: "Valaki"
-            city: "Valahol"
+        body: JSON.stringify( {
+            name: "Valaki",
+            city: "Valahol",
             salary: 300
         })
-    }
+    })
 }
 
-
-
-function getEmployees(){
+function getEmployees() {
     fetch(state.url)
-    .then(response => response.json())
-    .then(result => renderEmployees(result))
+    .then( response => response.json())
+    .then(result => {
+        // console.log(result)
+        renderEmployees(result)
+    })
 }
-getEmployees()
 
-function renderEmployees(employeeList){
+function renderEmployees(employeeList) {
+    
     employeeList.forEach(emp => {
-        console.log(emp.id)
-        console.log(emp.name)
-        console.log(emp.city)
         console.log(emp.salary)
         const row = document.createElement('tr')
         row.innerHTML = `
-        <td>${emp.id}</td>
-        <td>${emp.name}</td>
-        <td>${emp.city}</td>
-        <td>${emp.salary}</td>
-        <td>
-        <button class= "btn btn-success">Szerkesztés</button>
-        </td>
-        <td> <button class="btn btn-danger">Törlés</button></td>
+            <td>${emp.id}</td>
+            <td>${emp.name}</td>
+            <td>${emp.city}</td>
+            <td>${emp.salary}</td>
+            <td>
+                <button 
+                    class="btn btn-primary">
+                    Szerkesztés
+                </button>
+            </td>
+            <td>
+                <button
+                    class="btn btn-danger">
+                    Törlés
+                </button>
+            </td>
         `
         doc.empBody.appendChild(row)
     });
+    
 }
+getEmployees()
