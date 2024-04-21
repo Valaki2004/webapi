@@ -5,20 +5,17 @@ const doc = {
     cityInput: document.querySelector("#city"),
     salaryInput: document.querySelector("#salary")
 }
-
 const state = {
     url: 'http://localhost:8000/employees',
     name: '',
     city: '',
     salary: 300
 }
-
 doc.addButton.addEventListener('click', () => {
     getdataFromForm()
     console.log('jó')
     createEmployee()
 })
-
 function getdataFromForm(){
     state.name = doc.nameInput.value
     state.city = doc.cityInput.value
@@ -37,38 +34,25 @@ function createEmployee() {
         })
     })
 }
-
 function getEmployees() {
     fetch(state.url)
     .then( response => response.json())
     .then(result => {
-        // console.log(result)
+        console.log(result)
         renderEmployees(result)
     })
 }
-
 function renderEmployees(employeeList) {
-    
     employeeList.forEach(emp => {
         console.log(emp.salary)
         const row = document.createElement('tr')
         row.innerHTML = `
-            <td>${emp.id}</td>
-            <td>${emp.name}</td>
-            <td>${emp.city}</td>
-            <td>${emp.salary}</td>
-            <td>
-                <button 
-                    class="btn btn-primary">
-                    Szerkesztés
-                </button>
-            </td>
-            <td>
-                <button
-                    class="btn btn-danger">
-                    Törlés
-                </button>
-            </td>`
+        <td>${emp.id}</td>
+        <td>${emp.name}</td>
+        <td>${emp.city}</td>
+        <td>${emp.salary}</td>
+        <td><button class="btn btn-primary">Szerkesztés</button></td>
+        <td><button class="btn btn-danger">Törlés</button></td>`
         doc.empBody.appendChild(row)
     });    
 }
