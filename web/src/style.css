@@ -1,8 +1,8 @@
 body{
     background-image: -webkit-linear-gradient(black,white,black);
-    height: 1000px;
+    height: 900px;
     color: white;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 .tábla{
      color: black;
