@@ -11,48 +11,6 @@
       "name": "Erős István",
       "city": "Szolnok",
       "salary": 327
-    },
-    {
-      "name": "Valaki",
-      "city": "Valahol",
-      "salary": 300,
-      "id": 3
-    },
-    {
-      "name": "Valaki",
-      "city": "Valahol",
-      "salary": 300,
-      "id": 4
-    },
-    {
-      "name": "awd",
-      "city": "awd",
-      "salary": {},
-      "id": 5
-    },
-    {
-      "name": "fs",
-      "city": "fsef",
-      "salary": {},
-      "id": 6
-    },
-    {
-      "name": "adaw",
-      "city": "dawd",
-      "salary": "2342",
-      "id": 7
-    },
-    {
-      "name": "2432",
-      "city": "234",
-      "salary": "adwdwa",
-      "id": 8
-    },
-    {
-      "name": "",
-      "city": "",
-      "salary": "",
-      "id": 9
     }
   ]
 }

@@ -1,7 +1,8 @@
 body{
-    background-image: -webkit-linear-gradient(bottom,red,green,blue);
+    background-image: -webkit-linear-gradient(black,white,black);
     height: 1000px;
     color: white;
+    background-repeat: no-repeat;
 }
 .tábla{
      color: black;

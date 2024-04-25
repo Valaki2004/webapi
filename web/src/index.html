@@ -9,9 +9,7 @@
   </head>
   <body>
     <div class="container">
-
       <h1 class="m-4 text-center">Dolgozók</h1>
-
         <table class="table table-striped table-dark">
           <thead>
             <tr>
@@ -25,15 +23,14 @@
           </thead>
           <tbody id="empBody"></tbody>
         </table>
-      
-          <!-- Button trigger modal -->
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Új dolgozó felvétele</button>
-          <!-- Modal -->
+          </div>
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5 tábla" id="exampleModalLabel">Új dolgozó felvétele</h1>
+                  <h1 class="modal-title fs-5 tábla"id="exampleModalLabel">Új dolgozó felvétele</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="container">
@@ -52,11 +49,10 @@
               <input type="text" id="salary" class="form-control">
             </div>
             </div>
-            <button class="btn btn-primary m-2" id="addButton">Mentés</button>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
-                  <button type="button" class="btn btn-primary">Váltóztatások mentése</button>
+                  <button type="button" class="btn btn-primary"id="addButton">Váltóztatások mentése</button>
                 </div>
               </div>
             </div>

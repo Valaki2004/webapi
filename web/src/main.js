@@ -15,6 +15,9 @@ doc.addButton.addEventListener('click', () => {
     getdataFromForm()
     console.log('jó')
     createEmployee()
+    deleteModalContent()
+    clearTableContent()
+    getEmployees()
 })
 function getdataFromForm(){
     state.name = doc.nameInput.value
@@ -39,6 +42,7 @@ function getEmployees() {
     .then( response => response.json())
     .then(result => {
         console.log(result)
+        clearTableContent()
         renderEmployees(result)
     })
 }
@@ -52,8 +56,25 @@ function renderEmployees(employeeList) {
         <td>${emp.city}</td>
         <td>${emp.salary}</td>
         <td><button class="btn btn-primary">Szerkesztés</button></td>
-        <td><button class="btn btn-danger">Törlés</button></td>`
+        <td><button class="btn btn-danger" onclick="StartDelete(${emp.id})">Törlés</button></td>`
         doc.empBody.appendChild(row)
     });    
+}
+function deleteModalContent() {
+    doc.nameInput.value= '',
+    doc.nameCity.value= '',
+    doc.nameSalary.value= ''
+}
+function clearTableContent(){
+    doc.empBody.textContent= ''
+}
+function StartDelete(id){
+    console.log(id)
+    deleteEmployee(id)
+    getEmployees()
+}
+function deleteEmployee(id){
+    let newUrl = state.url + '/'+ id
+    fetch(newUrl, { method:'delete' })
 }
 getEmployees()
