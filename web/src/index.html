@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu">
   <head>
@@ -24,6 +23,7 @@
           </thead>
           <tbody id="empBody"></tbody>
         </table>
+
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#operatorModal" onclick="startAdding()">Új dolgozó felvétele</button>
           </div>
@@ -38,7 +38,7 @@
                 <div class="modal-body">
             <div class="addform">
               <div class="input">
-                <label for="" class="form-label tábla">ID</label>
+                <label for="id" class="form-label tábla">ID</label>
                 <input type="text" id="id" class="form-control" readonly>
               </div>
               <div class="input">
@@ -55,6 +55,7 @@
             </div>
             </div>
                 </div>
+                
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-backspace-fill"></i>Bezárás</button>
                   <button type="button" class="btn btn-success"id="addButton"><i class="bi bi-check-lg"></i>Mentés</button>

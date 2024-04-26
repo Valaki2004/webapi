@@ -21,6 +21,9 @@ doc.addButton.addEventListener('click', () => {
     clearTableContent()
     getEmployees()
 })
+function startAdding() {
+    deleteModalContent();
+}
 function getdataFromForm(){
     state.name = doc.nameInput.value
     state.city = doc.cityInput.value
@@ -57,7 +60,7 @@ function renderEmployees(employeeList) {
         <td>${emp.name}</td>
         <td>${emp.city}</td>
         <td>${emp.salary}</td>
-        <td><button class="btn btn-primary"data-id="${emp.id}"data-name="${emp.name}"data-city="${emp.city}"data-salary="${emp.salary}" data-bs-toggle="modal" data-bs-target="#operatorModalonclick="startEdit(this)"><i class="bi bi-feather"></i>Szerkesztés</button></td>
+        <td><button class="btn btn-primary"data-id="${emp.id}"data-name="${emp.name}"data-city="${emp.city}"data-salary="${emp.salary}" data-bs-toggle="modal" data-bs-target="#operatorModal"onclick="startEdit(this)"><i class="bi bi-feather"></i>Szerkesztés</button></td>
         <td><button class="btn btn-danger"onclick="StartDelete(${emp.id})">Törlés<i class="bi bi-trash3-fill"></i></button></td>`
         doc.empBody.appendChild(row)
     });    
