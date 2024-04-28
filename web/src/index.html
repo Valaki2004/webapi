@@ -27,11 +27,12 @@
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#operatorModal" onclick="startAdding()">Új dolgozó felvétele</button>
           </div>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+          <div class="modal fade" id="operatorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5 tábla"id="#operatorModal">Új dolgozó felvétele</h1>
+                  <h1 class="modal-title fs-5 tábla"id="exampleModalLabel">Új dolgozó felvétele</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="container">
@@ -42,15 +43,15 @@
                 <input type="text" id="id" class="form-control" readonly>
               </div>
               <div class="input">
-                <label for="" class="form-label tábla">Név</label>
+                <label for="name" class="form-label tábla">Név</label>
                 <input type="text" id="name" class="form-control">
             </div>
             <div class="input">
-              <label for="" class="form-label tábla">Település</label>
+              <label for="city" class="form-label tábla">Település</label>
               <input type="text" id="city" class="form-control">
             </div>
             <div class="input">
-              <label for="" class="form-label tábla">Fizetés</label>
+              <label for="salary" class="form-label tábla">Fizetés</label>
               <input type="text" id="salary" class="form-control">
             </div>
             </div>
