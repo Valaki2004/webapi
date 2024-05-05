@@ -8,8 +8,8 @@ const doc = {
 }
 const state = {
     url: 'http://localhost:8000/employees',
-    name: '',
-    city: '',
+    name: 'valaki',
+    city: 'valahol',
     salary: 300,
     add: true
 }
@@ -60,16 +60,17 @@ function renderEmployees(employeeList) {
         <td>${emp.name}</td>
         <td>${emp.city}</td>
         <td>${emp.salary}</td>
-        <td><button class="btn btn-primary"data-id="${emp.id}"data-name="${emp.name}"data-city="${emp.city}"data-salary="${emp.salary}" data-bs-toggle="modal" data-bs-target="#operatorModal"onclick="startEdit(this)"><i class="bi bi-feather"></i>Szerkesztés</button></td>
+        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#szerkesztes" onclick="Proba"><i class="bi bi-feather"></i>Szerkesztés</button></td>
         <td><button class="btn btn-danger"onclick="StartDelete(${emp.id})">Törlés<i class="bi bi-trash3-fill"></i></button></td>`
         doc.empBody.appendChild(row)
     });    
 }
+// <td><button class="btn btn-primary"data-id="${emp.id}"data-name="${emp.name}"data-city="${emp.city}"data-salary="${emp.salary}" data-bs-toggle="modal" data-bs-target="#operatorModal"onclick="startEdit(this)"><i class="bi bi-feather"></i>Szerkesztés</button></td>
 function deleteModalContent() {
     doc.idInput = ''
     doc.nameInput.value = ''
-    doc.cityInput = ''
-    doc.salaryInput = ''
+    doc.cityInput.value = ''
+    doc.salaryInput.value = ''
 }
 function clearTableContent(){
     doc.empBody.textContent= ''
@@ -91,3 +92,7 @@ function startEdit(source){
     doc.salaryInput.value = source.dataset.salary
 }
 getEmployees()
+
+function Proba(){
+    console.log(megyen)
+}

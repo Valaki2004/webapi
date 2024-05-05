@@ -1,9 +1,12 @@
 body{
-    background-image: -webkit-linear-gradient(black,white,black);
-    height: 900px;
-    color: white;
-    background-repeat: repeat;
+    background-image: -webkit-linear-gradient(white,black);
+    height: 1000px;
+    color: black;
+    background-repeat: no-repeat;
 }
 .tábla{
      color: black;
+}
+.atlaszo{
+    opacity: 0.9;
 }
